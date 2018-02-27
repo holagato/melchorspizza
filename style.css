@@ -1,0 +1,552 @@
+@font-face {
+	font-family: "Tofino Wide Ultra";
+	src: url("fonts/TofinoProPersonalWide-Ultra.otf") format("opentype");
+}
+@font-face {
+	font-family: "Tofino Wide Ultra Italic";
+	src: url("fonts/TofinoProPersonalWide-UltraItalic.otf") format("opentype");
+}
+@font-face {
+	font-family: "Tofino Wide Black Italic";
+	src: url("fonts/TofinoProPersonalWide-BlackItalic.otf") format("opentype");
+}
+@font-face {
+	font-family: "Tofino Wide Medium";
+	src: url("fonts/TofinoProPersonalWide-Medium.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Cloister Black";
+	src: url("fonts/CloisterBlack.ttf") format("truetype");
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+
+
+
+/* Global Styles */
+
+html {}
+.shadow {
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, .5);
+}
+::selection {
+	background-color: #FF00FF;
+}
+h1, h2, h3 {
+	font-weight: 400;
+}
+ul {
+	padding: 0;
+	list-style-type: none;
+}
+.invert:hover {
+	filter: invert(100%);
+}
+.transform {
+	transition: all .15s ease-in-out;
+}
+.transform:hover {
+	transform: skewX(-2deg);
+}
+body {
+	z-index: 0;
+	font-size: 100%;
+	background-color: #1A231C;
+	/* background-image: url(img/stars.gif); */
+	font-family: "Tofino Wide Ultra", 'arial', 'helvetica', sans-serif;
+}
+/* Use class "trigger" in html to use script.
+
+
+.trigger-class {
+	background-image: url(img/stars.gif);
+}
+
+*/
+
+.starz {
+	overflow: visible;
+	background: url('img/stars.gif');
+	background-repeat: repeat;
+	background-size: 100%;
+	color: transparent;
+	-webkit-font-smoothing: antialiased;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+a {
+	font-size: 3.75rem;
+	text-decoration: none;
+	line-height: normal;
+	transition: font-size 0.2s;
+	background: url('img/stars.gif');
+	background-repeat: repeat;
+	background-size: 20%;
+	color: transparent;
+	-webkit-font-smoothing: antialiased;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+a:hover {
+	font-size: 4rem;
+	font-style: italic;
+}
+
+/* Intro Section */
+
+#intro-container {
+	position: relative;
+	height: 100vh;
+}
+
+header {
+
+margin-top: 20px;
+width: 100%;
+position: fixed;
+
+}
+
+#links {
+margin-left: -1px;
+
+
+}
+
+#links li {
+margin-top: 9px;
+display: inline;
+float: left;
+
+}
+
+#links li a {
+font-size: 1.25rem;
+}
+
+#links li a:hover {
+	font-size: 1.5rem;
+}
+
+#about-link {
+	font-size: 1.875rem;
+	z-index: 10;
+	float: right;
+	margin-right: -0.5px;
+}
+#about-link:hover {
+	font-size: 2.125rem;
+}
+
+#my-name {
+	font-size:5rem;
+	background-size:10%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#sebastian {
+font-family: 'Roboto Mono', monospace;
+font-size: 5rem;
+letter-spacing: 2px;
+line-height: 0.5;
+margin-left: -7px;
+}
+
+#melchor {
+font-family: "Cloister Black";
+font-size: 7.2rem;
+line-height: 0.8;
+}
+
+#hedman {
+font-family: "Tofino Wide Black Italic";
+line-height: 0.2;
+margin-left: -2px;
+}
+/* Case Study SF BIO */
+
+article {
+	width: 100%;
+	position: relative;
+	padding-top: 4%;
+	padding-bottom: 8%;
+	overflow: hidden;
+}
+#sfbio-container {
+	height: 100vh;
+	min-height: 600px;
+	max-height: 900px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: solid;
+	border-top: solid;
+	border-color: #000000;
+	border-width: 1.5px;
+}
+#sfbio-screen-control {
+	width: 70%;
+	max-width: 980px;
+	margin: 0 auto;
+}
+#sfbio-screen-control img {
+	width: 100%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #000000;
+}
+/* LEFT SCREEN */
+
+#sfbio-screen-lt {
+	margin-left: 2%;
+	width: 47%;
+	float: left;
+	position: relative;
+	z-index: 10;
+}
+/* RIGHT SCREEN */
+
+#sfbio-screen-rt {
+	margin-right: 2%;
+	margin-top: 4%;
+	width: 42%;
+	float: right;
+	position: relative;
+}
+.marquee {
+	position: absolute;
+	height: 85px;
+	width: 100%;
+	overflow: hidden;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.marquee div {
+	display: block;
+	width: 200%;
+	height: 100%;
+	position: absolute;
+	animation: marquee 12s linear infinite;
+}
+.marquee span {
+	float: left;
+	width: 50%;
+}
+@keyframes marquee {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -100%;
+	}
+}
+#magicmagnet-container {
+	overflow: visible;
+	position: relative;
+	height: 100vh;
+	min-height: 600px;
+	max-height: 900px;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+#magicmagnet-container img {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #000000;
+}
+#spinny-container {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+#spinny-text-box {
+	height: 650px;
+	width: 650px;
+	position: absolute;
+	top: 50%;
+	margin-top: -380px;
+	z-index: 100;
+	margin-left: 8%;
+	animation: spin 28s infinite linear;
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(359.9999999999deg);
+	}
+}
+#spinny-text {
+	padding: 0;
+	margin: 0;
+	font-size: 4rem;
+	letter-spacing: 0.4rem;
+	transition: font-size 0.2s;
+}
+#spinny-text:hover {
+	font-size: 4.25rem;
+	font-style: italic;
+	filter: invert(100%);
+}
+#spinny-text span {
+	line-height: normal;
+	background: url('img/stars.gif');
+	background-repeat: repeat;
+	background-size: 100px;
+	color: transparent;
+	-webkit-font-smoothing: antialiased;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#magnet-img {
+	width: 500px;
+	height: 500px;
+	float: right;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 8%;
+}
+#magnet-img img {
+	width: 100%;
+	height: 100%;
+}
+#vr-container {
+	border-top: solid;
+	border-color: #000000;
+	border-width: 1.5px;
+	min-height: 600px;
+	height: 100vh;
+	max-height: 900px;
+}
+#vr-content-container {
+	position: relative;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+#vr-content-container a {
+	line-height: 1.15;
+}
+#yetanotherdiv {}
+#vr-video-container {
+	background: rgba(9, 15, 11, .3);
+	position: absolute;
+	border-radius: 40px;
+	left: 50%;
+	top: 50%;
+	transform: skewX(0deg) translate(-50%, -50%);
+	border-style: solid;
+	border-width: 2px;
+	border-color: #000000;
+	transition: all .15s ease-in-out;
+}
+#vr-video-container:hover {
+	transform: skewX(-2deg) translate(-50%, -50%);
+}
+#vr-video-container video {
+	padding: 1% 9%;
+}
+footer {
+	height: 100vh;
+	border-top: solid;
+	border-color: #000000;
+	border-width: 1.5px;
+	border-bottom: solid;
+	text-align: center;
+	position: relative;
+}
+footer div {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translate(0, -50%)
+}
+footer div h3 a {
+	font-size: 2rem;
+	font-style: italic;
+	color: #F6C0B7;
+	-webkit-text-fill-color: #F6C0B7;
+}
+footer div h3 a:hover {
+	font-size: 2.25rem;
+	color:#FADF7F ;
+	-webkit-text-fill-color: #FADF7F;
+}
+/* CASE SF BIO */
+
+.case-para {
+color: white;
+font-family: "Tofino Wide Medium", 'arial', 'helvetica', sans-serif;
+font-size: 1.25rem;
+line-height: 1.5;
+letter-spacing: 1.2;
+}
+
+.hero-type-container {}
+.herotype {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 25vw;
+	font-family: "Tofino Wide Black Italic", 'arial', 'helvetica', sans-serif;
+	position: fixed;
+	text-transform: uppercase;
+	text-align: center;
+	z-index: 1;
+}
+.case-content {
+	position: relative;
+	z-index: 10;
+}
+.case-content img {
+	max-height: 95vh;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 2px;
+}
+.case-descrip {
+	color: white;
+	font-family: "Tofino Wide Black Italic", 'arial', 'helvetica', sans-serif;
+	text-align: center;
+	font-size: 2rem;
+}
+#sfbio-herotype {
+	color: #CA0928;
+}
+#case-descript-container {
+	margin-bottom: 40px;
+}
+#sfbio-block-1 {
+
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#sfbio-block-1 img {
+	max-width: 45%;
+	margin: 0 10px;
+}
+
+#sfbio-block-2 {
+	width: 550px;
+	margin-left: 5vw;
+
+
+}
+
+
+
+
+
+	@media all and (max-width: 860px) {
+
+		#magnet-img {
+			float: none;
+			margin: 0 auto;
+			right: 0;
+		}
+
+		/* LEFT SCREEN */
+		#spinny-text-box {
+			left: -50%;
+			margin-left: 0;
+		}
+	}
+	@media all and (max-width: 736px) {}
+	@media all and (max-width: 480px) {
+		a {
+			font-size: 2.75rem;
+			color: #F4FF32;
+			text-decoration: none;
+			transition: font-size 0.2s;
+		}
+		a:hover {
+			font-size: 3rem;
+			color: #F26060;
+		}
+
+		.logo img {
+
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 60vw;
+		}
+
+		#intro-left ul {
+			left: -6.5rem;
+		}
+		#intro-right a {
+			right: -2rem;
+		}
+		.slideshow-block {
+			width: 174px;
+			height: 232px;
+		}
+		.slides img {
+			width: 100%;
+			height: auto;
+		}
+		#magnet-img {
+			width: 90%;
+			height: auto;
+		}
+		#spinny-text-box {
+			height: 500px;
+			width: 500px;
+			top: 50%;
+			margin-top: -260px;
+			left: -250px;
+		}
+		#spinny-text {
+			font-size: 3rem;
+			letter-spacing: 0.4rem;
+		}
+		#spinny-text:hover {
+			font-size: 3.25rem;
+		}
+		#vr-img-container {
+			border-radius: 25px;
+		}
+		#vr-img-container video {
+			padding: 1% 9%;
+			height: auto;
+			width: 80vw;
+		}
+
+		#sfbio-block-1 {
+			background-color: blue;
+			width: 100%;
+			display: block;
+			align-items: center;
+			justify-content: center;
+		}
+		#sfbio-block-1 img {
+			max-width: 80%;
+			margin: 10px 0;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+
+
+
+	}
